@@ -7,7 +7,7 @@ title: AI APP
 subtitle: ''
 description: ''
 keywords:
-author: 0326
+author: 
 language: zh-CN
 timezone: ''
 
@@ -40,8 +40,11 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
-relative_link: false
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+  relative_link: true
 future: true
 syntax_highlighter: highlight.js
 highlight:

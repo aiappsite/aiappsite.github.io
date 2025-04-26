@@ -9,15 +9,15 @@
 #！ @docs https://aurora.tridiamond.tech/guide/configuration.html
 #! ---------------------------------------------------------------
 site:
-  subtitle: AI APP
-  author: 0326
-  nick: 0326
-  description:
+  subtitle: 'AI应用技术网'
+  author: AI-APP
+  nick: www.ai-app.site
+  description: AI技术学习、应用开发、行业报告、创新探索
   link: '/'
   language: zh-CN
   multi_language: true
-  logo:
-  avatar:
+  logo: https://cdn.jsdelivr.net/gh/0326/imgs@main/blog/AI_APP_LOGOx100.png
+  avatar: https://cdn.jsdelivr.net/gh/0326/imgs@main/blog/AI_APP_LOGOx300.png
   beian:
     number: ''
     link: ''
@@ -32,7 +32,10 @@ site:
   # slug: use generated slug base on title
   # (Default is 'slug')
   pathSlug: 'slug'
-
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
 #! ---------------------------------------------------------------
 #! Authors Configs
 #！ @docs https://aurora.tridiamond.tech/guide/authors.html
@@ -55,7 +58,8 @@ menu:
   About: true
   Tags: true
   Archives: true
-  Friends: false
+  Links: true
+  Friends: true
 
 #! ---------------------------------------------------------------
 #! Theme Config
@@ -78,9 +82,9 @@ socials:
   customs:
   ##! Example:
   ##! --- Using SVG
-  # bilibili:
-  #   icon: http://localhost:4000/svg/bilibili.svg
-  #   link: https://live.bilibili.com/22619211
+  bilibili:
+    icon: http://localhost:4000/svg/bilibili.svg
+    link: https://live.bilibili.com/22619211
 
   ##! --- Using IconFont
   # baidu:
@@ -88,9 +92,9 @@ socials:
   #   link: https://live.bilibili.com/22619211
 
   ##! --- Using FontAwesome
-  # book:
-  #   icon: far fa-address-book
-  #   link: https://live.bilibili.com/22619211
+  book:
+    icon: far fa-address-book
+    link: https://live.bilibili.com/22619211
 
 #! ---------------------------------------------------------------
 #! Site Meta Configs
@@ -98,10 +102,10 @@ socials:
 #! ---------------------------------------------------------------
 site_meta:
   cdn: cn
-  favicon:
-  description: ''
-  keywords: ''
-  author: ''
+  favicon: '/static/img/dccf965f.jpg'
+  description: '优质AI应用收藏网站'
+  keywords: 'AI,APP,AI-APP,AI应用,AI应用程序,AI工具,AI工具箱'
+  author: '0326'
 
 #! ---------------------------------------------------------------
 #! Plugins
@@ -185,8 +189,8 @@ copy_protection:
 #! @docs https://aurora.tridiamond.tech/guide/site-meta.html#custom-meta
 #! ---------------------------------------------------------------
 aurora_bot:
-  enable: false
-  locale: en
+  enable: true
+  locale: cn
   bot_type: dia
   tips:
 
