@@ -55,11 +55,20 @@ authors:
 #！ @docs https://aurora.tridiamond.tech/guide/menu.html
 #! ---------------------------------------------------------------
 menu:
-  About: true
+  About: false
   Tags: true
   Archives: true
   Links: true
   Friends: true
+  Term: true
+  # custom page
+  term-board:
+    name: 'Term'
+    i18n:
+      zh-CN: 'AI术语表'
+      zh-TW: 'AI術語表'
+      en: 'AI Term'
+    path: '/page/term'
 
 #! ---------------------------------------------------------------
 #! Theme Config
@@ -67,7 +76,7 @@ menu:
 #! ---------------------------------------------------------------
 theme:
   dark_mode: true
-  profile_shape: diamond # support `circle`, `diamond`, `rounded`
+  profile_shape: none # support `circle`, `diamond`, `rounded`
   feature: true
   gradient:
     color_1: '#24c6dc'
@@ -193,6 +202,17 @@ aurora_bot:
   locale: cn
   bot_type: dia
   tips:
+    messages:
+      - 你好，我是 <span>Dia</span>，好高兴遇见你～
+      - 好久不见，日子过得好快呢……
+      - '<span>大坏蛋！</span>你都多久没理人家了呀，嘤嘤嘤～'
+      - 嗨～快来逗我玩吧！
+      - 拿小拳拳锤你胸口！
+      - 学习使我们快乐，快乐使我们更想学习～
+      - 你知道吗？你可以<span>点击我</span>返回页面顶部哦！～
+      # 这是一个特殊的函数，它将触发 quotes API
+      # 和 Dia 会说出每日引用的信息。
+      - showQuote
 
 #! ---------------------------------------------------------------
 #! Injections
