@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "serve": "vite",
-    "build": "vite build --mode production",
+    "build": "vite build --mode production && cp -r files source/",
     "postbuild": "ls source/",
     "lint": "eslint --ext .js,.vue .",
     "preview": "vite preview",

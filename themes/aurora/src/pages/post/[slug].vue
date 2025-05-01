@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col mt-20">
-    <div class="main-grid">
+    <div class="main-grid" :class="{ 'main-report-header': isReport }">
       <div class="post-header">
         <span class="post-labels">
           <ob-skeleton v-if="loading" tag="b" height="20px" width="35px" />
@@ -102,7 +102,7 @@
         </div>
       </div>
     </div>
-    <div class="main-grid">
+    <div class="main-grid" :class="{ 'main-report-content': isReport }">
       <div>
         <template v-if="post.content">
           <div
@@ -166,7 +166,7 @@
           </div>
         </template>
       </div>
-      <div>
+      <div v-if="!isReport">
         <Sidebar>
           <Profile :author="post.author.slug || ''" />
           <Toc :toc="post.toc" :comments="enabledComment" />
@@ -272,7 +272,7 @@ export default defineComponent({
     const navigateToCategory = (slug: string) => {
       router.push({ name: 'post-search', query: { category: slug } })
     }
-
+    console.log('currentPath', route.path)
     return {
       avatarClasses: computed(() => {
         return {
@@ -282,6 +282,7 @@ export default defineComponent({
       }),
       isMobile: computed(() => commonStore.isMobile),
       currentPath: computed(() => route.path),
+      isReport: computed(() => route.path.indexOf('/post/report') === 0),
       pluginConfigs: computed(() => appStore.themeConfig.plugins),
       enabledComment: computed(
         () => post.value.comments && enabledCommentPlugin.value.plugin !== ''
@@ -306,3 +307,12 @@ export default defineComponent({
   }
 })
 </script>
+
+<style>
+.main-report-header {
+  display: flex;
+}
+.main-report-content {
+  display: flex;
+}
+</style>
